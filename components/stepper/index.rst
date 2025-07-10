@@ -81,6 +81,19 @@ Configuration variables:
               number: GPIOXX
               inverted: true
 
+.. note::
+
+    The TMC steppers are pinout compatible but insteed of SLEEP PIN they have ENABLE PIN. In this case you need to invert the ``sleep_pin``:
+
+    .. code-block:: yaml
+
+        stepper:
+          - platform: a4988
+            # ...
+            sleep_pin:
+              number: GPIOXX
+              inverted: true
+
 ULN2003 Component
 -----------------
 
